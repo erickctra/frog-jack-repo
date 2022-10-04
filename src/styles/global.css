@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "monogram";
+  src: url("../assets/fonts/monogram.ttf");
+}
+
+body {
+  @apply bg-slate-200 font-monogram
+}
