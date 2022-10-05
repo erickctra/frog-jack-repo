@@ -8,5 +8,17 @@
 }
 
 body {
-  @apply bg-slate-200 font-monogram
+  @apply bg-bg font-monogram w-screen flex justify-center m-0 p-0
+}
+
+#playerHand div:nth-child(2) {
+  @apply -z-10 mt-4 -rotate-12
+}
+
+#playerHand div:nth-child(3) {
+  @apply z-10
+}
+
+#playerHand div:nth-child(4) {
+  @apply z-20 mt-4 rotate-12
 }

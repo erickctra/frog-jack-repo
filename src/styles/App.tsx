@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Card } from "./entities/card";
+import { Card } from "../entities/card";
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
   yourSum > 21 ? console.log(`%c estourou `, `background: #222; color: #a8324c`) : '';
   // yourSum === 21 ? console.log(`%c ganhou `, `background: #222; color: #bada55`) : '' ;
   winner != '' ? console.log(`%c ${winner} ganhou `, `background: #222; color: #eba434`) : null;
-
+  
   if (canHit === false && winner === '') {
     dealerPlay()
   }
@@ -102,43 +102,21 @@ function App() {
 
 
   return (
-    <div className="w-96 flex justify-center items-center flex-col h-auto">
+    <div className="w-96 flex justify-center flex-col h-auto">
       <a className="text-2xl text-secondary antialiased underline text-center mt-6" href="">https://github.com/erickctra</a>
-
+    
       {/* dealer hand */}
-      <div className="flex justify-center mt-20 relative scale-[0.8] md:scale-100">
-        <h1 className="text-3xl text-primary absolute -top-8 -right-10">1</h1>
-
+      <div className="flex justify-center mt-20">
         <div className="bg-[url('/src/assets/cards/cardBack.png')] bg-cover w-24 h-36 z-10 -rotate-6 -mt-3"></div>
         <div className="bg-[url('/src/assets/cards/card.png')] bg-cover w-24 h-36 -ml-6"></div>
       </div>
 
-      <div className="bg-[url('/src/assets/cards/dealerShadow.png')] bg-inherit bg-no-repeat w-40 h-4 mt-10"></div>
-
+      <div className="trapezoid"></div>
 
       {/* your hand */}
-      <div id="playerHand" className="flex justify-center mt-20 relative scale-[0.8] md:scale-100">
-        <h1 className="text-3xl text-primary absolute -top-8 -right-10">1</h1>
+      <div>
 
-        <div className="bg-[url('/src/assets/cards/card.png')] bg-cover w-32 h-48"></div>
-        <div className="bg-[url('/src/assets/cards/card.png')] bg-cover w-32 h-48 -ml-6 "></div>
-        <div className="bg-[url('/src/assets/cards/card.png')] bg-cover w-32 h-48 -ml-6 rotate-6"></div>
       </div>
-
-      <div className="bg-[url('/src/assets/cards/yourShadow.png')] bg-inherit bg-no-repeat w-60 h-10 mt-10 relative scale-[0.8] md:scale-100"></div>
-
-      {/* Game Controls */}
-
-      <div className="mt-14">
-      <div className="w-full h-[6px] rounded-full bg-shadow mb-4"></div>
-
-        <div >
-          <button className="text-3xl w-48 h-14 bg-primary text-bg rounded-md">hit</button>
-          <button className="text-3xl w-14 h-14 bg-b-secondary text-bg rounded-md ml-4">.</button>
-        </div>
-        <a className="text-3xl text-secondary underline " href="">how to play</a>
-      </div>
-
     </div>
   )
 }
