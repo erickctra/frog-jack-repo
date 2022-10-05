@@ -118,11 +118,13 @@ function App() {
 
       {/* your hand */}
       <div id="playerHand" className="flex justify-center mt-20 relative scale-[0.8] md:scale-100">
-        <h1 className="text-3xl text-primary absolute -top-8 -right-10">1</h1>
+        <h1 className="text-3xl text-primary absolute -top-8 -right-10">{yourSum}</h1>
 
-        <div className="bg-[url('/src/assets/cards/card.png')] bg-cover w-32 h-48"></div>
-        <div className="bg-[url('/src/assets/cards/card.png')] bg-cover w-32 h-48 -ml-6 "></div>
-        <div className="bg-[url('/src/assets/cards/card.png')] bg-cover w-32 h-48 -ml-6 rotate-6"></div>
+
+
+        {yourDeck.map((card, index) => {
+          return <div key={index} className="flex justify-center items-center text-6xl text-[#6D5C5C] bg-[url('/src/assets/cards/card.png')] bg-cover w-32 h-48 -ml-6">{card.figure}</div>
+        })}
       </div>
 
       <div className="bg-[url('/src/assets/cards/yourShadow.png')] bg-inherit bg-no-repeat w-60 h-10 mt-10 relative scale-[0.8] md:scale-100"></div>

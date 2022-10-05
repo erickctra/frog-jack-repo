@@ -16,9 +16,13 @@ body {
 }
 
 #playerHand div:nth-child(3) {
-  @apply z-10
+  @apply z-10 -ml-6 -rotate-3
 }
 
 #playerHand div:nth-child(4) {
-  @apply z-20 mt-4 rotate-12
+  @apply z-20 -ml-6 rotate-3
+}
+
+#playerHand div:last-child {
+  @apply z-50 mt-4 rotate-12 -ml-6
 }
