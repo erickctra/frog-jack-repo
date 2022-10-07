@@ -11,7 +11,7 @@ body {
   @apply bg-bg font-monogram w-screen flex justify-center m-0 p-0
 }
 
-#playerHand div:nth-child(2) {
+/* #playerHand div:nth-child(2) {
   @apply -z-10 mt-4 -rotate-12
 }
 
@@ -25,4 +25,4 @@ body {
 
 #playerHand div:last-child {
   @apply z-50 mt-4 rotate-12 -ml-6
-}
+} */
