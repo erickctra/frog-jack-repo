@@ -1,6 +1,6 @@
 export interface cardProps {
   value: number;
-  cardFigure: number;
+  cardFigure: string | number;
 }
 
 export class Card {
@@ -15,10 +15,25 @@ export class Card {
 	}
 
   constructor() {
-    const randomValue = Math.floor(Math.random() * 13) + 1;
+    const randomValue = Math.floor(Math.random() * 4) + 1;
     
-    const formatedValue = randomValue > 10 ? 10 : randomValue;
-    const props: cardProps = { value: formatedValue, cardFigure: randomValue}
+    let formatedValue = randomValue > 10 ? 10 : randomValue;
+    let letter: string | number = formatedValue;
+
+    if (randomValue === 1) {
+      letter = 'A';
+    } 
+    else if (randomValue === 12) {
+      letter = 'Q';
+    }
+    else if (randomValue === 12) {
+      letter = 'Q';
+    }    
+    else if (randomValue === 13) {
+      letter = 'K';
+    }
+
+    const props: cardProps = { value: formatedValue, cardFigure: letter}
 
     this.props = props;
   }
